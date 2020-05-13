@@ -1,0 +1,50 @@
+{
+  "preflight": [
+    {
+      "file": "/Library/Application Support/installapplications/installapplications-preflight.sh", 
+      "hash": "57c07fcc42cbf0e91414524dd6e95d5c022a558c885cafaee032e9493cbcd06b", 
+      "name": "installapplications-preflight.sh", 
+      "type": "rootscript", 
+      "url": "https://raw.githubusercontent.com/xsrvx/Installapplications/master/server/preflight/installapplications-preflight.sh"
+    }
+  ], 
+  "setupassistant": [
+    {
+      "file": "/Library/Application Support/installapplications/DEPNotify.pkg", 
+      "hash": "d969b3f5f617424de526a45f5b8badf1d7cbfef8974691beecb3729103003ba0", 
+      "name": "DEPNotify.pkg", 
+      "packageid": "", 
+      "type": "package", 
+      "url": "https://raw.githubusercontent.com/xsrvx/Installapplications/master/server/setupassistant/DEPNotify.pkg", 
+      "version": ""
+    }, 
+    {
+      "file": "/Library/Application Support/installapplications/NoMAD-Login-AD.pkg", 
+      "hash": "645a216739e6286c9dbfd1cf18443105490b14d9637ad614afdef0372ae73031", 
+      "name": "NoMAD-Login-AD.pkg", 
+      "packageid": "", 
+      "type": "package", 
+      "url": "https://raw.githubusercontent.com/xsrvx/Installapplications/master/server/setupassistant/NoMAD-Login-AD.pkg", 
+      "version": ""
+    }, 
+    {
+      "file": "/Library/Application Support/installapplications/NoMAD.pkg", 
+      "hash": "4b32f95c141652a7a2d2f9b321c62499d5ba092ec6d37d590203f526c8e6585a", 
+      "name": "NoMAD.pkg", 
+      "packageid": "", 
+      "type": "package", 
+      "url": "https://raw.githubusercontent.com/xsrvx/Installapplications/master/server/setupassistant/NoMAD.pkg", 
+      "version": ""
+    }
+  ], 
+  "userland": [
+    {
+      "donotwait": true, 
+      "file": "/Library/Application Support/installapplications/caffeinate.py", 
+      "hash": "a09d0f168d74ac0ca910cd630416e2e8c1aefb0ab4701d4ae1aa5ae9e674d8b4", 
+      "name": "caffeinate.py", 
+      "type": "rootscript", 
+      "url": "https://raw.githubusercontent.com/xsrvx/Installapplications/master/server/userland/caffeinate.py"
+    }
+  ]
+}
