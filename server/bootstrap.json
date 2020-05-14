@@ -1,7 +1,7 @@
 {
   "setupassistant": [
     {
-      "file": "/Library/Application Support/installapplications/DEPNotify.pkg", 
+      "file": "/Library/installapplications/DEPNotify.pkg", 
       "hash": "d969b3f5f617424de526a45f5b8badf1d7cbfef8974691beecb3729103003ba0", 
       "name": "DEPNotify.pkg", 
       "packageid": "menu.nomad.DEPNotify", 
@@ -10,7 +10,7 @@
       "version": "1.1.5"
     }, 
     {
-      "file": "/Library/Application Support/installapplications/NoMAD-Login-AD.pkg", 
+      "file": "/Library/installapplications/NoMAD-Login-AD.pkg", 
       "hash": "645a216739e6286c9dbfd1cf18443105490b14d9637ad614afdef0372ae73031", 
       "name": "NoMAD-Login-AD.pkg", 
       "packageid": "NoMAD-Login-AD.pkg", 
@@ -19,7 +19,7 @@
       "version": "1.3.1"
     }, 
     {
-      "file": "/Library/Application Support/installapplications/NoMAD.pkg", 
+      "file": "/Library/installapplications/NoMAD.pkg", 
       "hash": "4b32f95c141652a7a2d2f9b321c62499d5ba092ec6d37d590203f526c8e6585a", 
       "name": "NoMAD.pkg", 
       "packageid": "com.trusourcelabs.NoMAD", 
@@ -31,7 +31,7 @@
   "userland": [
     {
       "donotwait": true, 
-      "file": "/Library/Application Support/installapplications/caffeinate.py", 
+      "file": "/Library/installapplications/caffeinate.py", 
       "hash": "a09d0f168d74ac0ca910cd630416e2e8c1aefb0ab4701d4ae1aa5ae9e674d8b4", 
       "name": "caffeinate.py", 
       "type": "rootscript", 
