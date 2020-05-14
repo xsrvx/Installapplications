@@ -1,13 +1,4 @@
 {
-  "preflight": [
-    {
-      "file": "/Library/Application Support/installapplications/installapplications-preflight.sh", 
-      "hash": "57c07fcc42cbf0e91414524dd6e95d5c022a558c885cafaee032e9493cbcd06b", 
-      "name": "installapplications-preflight.sh", 
-      "type": "rootscript", 
-      "url": "https://raw.githubusercontent.com/xsrvx/Installapplications/master/server/preflight/installapplications-preflight.sh"
-    }
-  ], 
   "setupassistant": [
     {
       "file": "/Library/Application Support/installapplications/DEPNotify.pkg", 
