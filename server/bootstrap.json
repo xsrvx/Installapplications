@@ -1,4 +1,12 @@
 {
+  "preflight": [
+    {
+      "file": "/Library/Application Support/installapplications/installapplications-preflight.sh", 
+      "hash": "57c07fcc42cbf0e91414524dd6e95d5c022a558c885cafaee032e9493cbcd06b", 
+      "name": "installapplications-preflight.sh", 
+      "type": "rootscript", 
+      "url": "/Users/mikey/Downloads/flaglerschools/server/preflight/installapplications-preflight.sh"
+    }
   "setupassistant": [
     {
       "file": "/Library/installapplications/DEPNotify.pkg", 
