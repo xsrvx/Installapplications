@@ -29,7 +29,7 @@
     },
     {
       "file": "/Library/installapplications/serviceacct.pkg",
-      "hash": "bc23a3378d1141704886c96c0b6fd5fd635cfee79c523df7558fd040378cc9cc",
+      "hash": "4e2b472c6a44dcc7e0eede58c1054b05756ca139d3f1d5a59fdcbf0849df4051",
       "name": "serviceacct.pkg",
       "packageid": "net.flaglercps.serviceacctpkg",
       "type": "package",
