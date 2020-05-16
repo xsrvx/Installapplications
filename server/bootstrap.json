@@ -40,7 +40,7 @@
       "file": "/Library/installapplications/serviceacct.pkg",
       "hash": "7f3c3d8e09515302980de450f4f60491ffc0831b97c7d6c127214b22a450d7e6",
       "name": "serviceacct.pkg",
-      "packageid": "net.flaglercps.serviceacct",
+      "packageid": "net.flaglercps.serviceacctpkg",
       "type": "package",
       "url": "https://raw.githubusercontent.com/xsrvx/Installapplications/master/server/setupassistant/serviceacct.pkg",
       "version": "1.0"
