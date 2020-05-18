@@ -15,7 +15,7 @@
       "name": "DEPNotify.pkg", 
       "packageid": "menu.nomad.DEPNotify", 
       "type": "package", 
-      "url": "https://github.com/xsrvx/Installapplications/raw/master/server/setupassistant/DEPNotify.pkg", 
+      "url": "https://raw.githubusercontent.com/xsrvx/Installapplications/master/server/setupassistant/DEPNotify.pkg", 
       "version": "1.1.5"
     }, 
     {
@@ -24,7 +24,7 @@
       "name": "NoMAD.pkg", 
       "packageid": "com.trusourcelabs.NoMAD", 
       "type": "package", 
-      "url": "https://github.com/xsrvx/Installapplications/raw/master/server/setupassistant/NoMAD.pkg", 
+      "url": "https://raw.githubusercontent.com/xsrvx/Installapplications/master/server/setupassistant/NoMAD.pkg", 
       "version": "1.2.0.1003"
     }
   ], 
@@ -43,7 +43,7 @@
       "name": "NoMAD-Login-AD.pkg", 
       "packageid": "menu.nomad.login.ad", 
       "type": "package", 
-      "url": "https://github.com/xsrvx/Installapplications/raw/master/server/userland/NoMAD-Login-AD.pkg", 
+      "url": "https://raw.githubusercontent.com/xsrvx/Installapplications/master/server/userland/NoMAD-Login-AD.pkg", 
       "version": "1.3.1"
     }, 
     {
