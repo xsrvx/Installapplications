@@ -15,27 +15,56 @@
 logfile=/var/log/postinstall.log
 exec > $logfile 2>&1
 
+# Securly PAC for students
+securlyPAC() {
+	# -- write out settings for Securly -----------------------------
+	# Detects all network hardware & creates services for all installed network hardware
+	echo "Status: Enabling PAC for Securly..." >> $DNLog
+	autoProxyURL="https://useast-www.securly.com/smart.pac?fid=chandler.bing@flaglerschools.com"
+  
+	echo "Detecting network hardware..."
+	/usr/sbin/networksetup -detectnewhardware
+
+  	IFS=$'\n'
+
+  	# Loops through the list of network services
+  	for i in $(/usr/sbin/networksetup -listallnetworkservices | tail +2 );
+
+    do
+      
+      	# Enable AutoProxyURL for Securly
+      	/usr/sbin/networksetup -setautoproxyurl "$i" "$autoProxyURL"
+      	/usr/sbin/networksetup -setproxybypassdomains "$i" *.local 169.254/16
+
+      	echo "Enabling AutoProxyURL for $i..."
+      	networksetup -setautoproxystate "$i" on
+      	networksetup -setv6off "$i"
+
+    done
+
+	echo "Flushing DNS..."
+	Killall -HUP mDNSResponder
+}
+
 # Download assets
 mkdir /usr/local/.install
-curl -L -o /tmp/background.png https://raw.githubusercontent.com/xsrvx/Installapplications/master/assets/Background.png
-mv /tmp/background.png /usr/local/.install/
-curl -L -o /tmp/background.png https://raw.githubusercontent.com/xsrvx/Installapplications/master/assets/iconoff.png
+curl -L -o /tmp/background.jpg https://raw.githubusercontent.com/xsrvx/Installapplications/master/assets/Background.jpg
+mv /tmp/background.jpg /usr/local/.install/
+curl -L -o /tmp/iconoff.png https://raw.githubusercontent.com/xsrvx/Installapplications/master/assets/iconoff.png
 mv /tmp/iconoff.png /usr/local/.install/
-curl -L -o /tmp/background.png https://raw.githubusercontent.com/xsrvx/Installapplications/master/assets/iconon.png
+curl -L -o /tmp/iconon.png https://raw.githubusercontent.com/xsrvx/Installapplications/master/assets/iconon.png
 mv /tmp/iconon.png /usr/local/.install/
-curl -L -o /tmp/background.png https://raw.githubusercontent.com/xsrvx/Installapplications/master/assets/logo.no.mission.medium.png
+curl -L -o /tmp/logo.no.mission.medium.png https://raw.githubusercontent.com/xsrvx/Installapplications/master/assets/logo.no.mission.medium.png
 mv /tmp/logo.no.mission.medium.png /usr/local/.install/
-curl -L -o /tmp/background.png https://raw.githubusercontent.com/xsrvx/Installapplications/master/assets/shaded-district-logo.png
+curl -L -o /tmp/shaded-district-logo.png https://raw.githubusercontent.com/xsrvx/Installapplications/master/assets/shaded-district-logo.png
 mv /tmp/shaded-district-logo.png /usr/local/.install/
 chmod -R 755 /usr/local/.install
-chown root:wheel -R /usr/local/.install
+chown -R root:wheel /usr/local/.install
 
 # DEPNotify location
 DNApp="/Applications/Utilities/DEPNotify.app"
 # Get the logged in user (should be admin)
 DN_User=$(stat -f %Su "/dev/console")
-# Setup Done File for DEPNotify
-setupDone="/var/tmp/com.depnotify.provisioning.done"
 # Command file
 DNLog="/var/tmp/depnotify.log"
 
@@ -149,35 +178,6 @@ defaults write /Library/Preferences/menu.nomad.login.ad.plist LoginScreen -bool 
 defaults write /Library/Preferences/menu.nomad.login.ad.plist KeychainAddNoMAD -bool true
 defaults write /Library/Preferences/menu.nomad.login.ad.plist KeychainCreate -bool true
 
-# -- write out settings for Securly -----------------------------
-# Detects all network hardware & creates services for all installed network hardware
-echo "Status: Enabling PAC for Securly..." >> $DNLog
-autoProxyURL="https://useast-www.securly.com/smart.pac?fid=chandler.bing@flaglerschools.com"
-  
-echo "Detecting network hardware..."
-/usr/sbin/networksetup -detectnewhardware
-
-  IFS=$'\n'
-
-  # Loops through the list of network services
-  for i in $(/usr/sbin/networksetup -listallnetworkservices | tail +2 );
-
-    do
-
-      autoProxyURLLocal=$(/usr/sbin/networksetup -getautoproxyurl "$i" | head -1 | cut -c 6-)
-      
-      # Enable AutoProxyURL for Securly
-      /usr/sbin/networksetup -setautoproxyurl "$i" "$autoProxyURL"
-      /usr/sbin/networksetup -setproxybypassdomains "$i" *.local 169.254/16
-
-      echo "Enabling AutoProxyURL for $i..."
-      networksetup -setautoproxystate "$i" on
-      networksetup -setv6off "$i"
-
-    done
-
-echo "Flushing DNS..."
-Killall -HUP mDNSResponder
 
 echo "Status: Complete" >> $DNLog
 echo "Command: ContinueButton: Finish" >> $DNLog
