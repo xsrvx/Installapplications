@@ -48,7 +48,7 @@
     }, 
     {
       "file": "/Library/installapplications/postinstall.sh", 
-      "hash": "18bf85458233d84ce2545d9b7b370a435f1e058fea9222379157f56b5a5e3bfd", 
+      "hash": "eeffb1832ec56a58c366e70e36ab7733515e5a212f682a1a26024edab268c349", 
       "name": "postinstall.sh", 
       "type": "rootscript", 
       "url": "https://raw.githubusercontent.com/xsrvx/Installapplications/master/server/userland/postinstall.sh"
