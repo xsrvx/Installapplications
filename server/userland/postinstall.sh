@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#  installapplications-preflight.sh
+#  installapplications-postflight.sh
 #
 #  Postinstall script for InstallApplications
 #
@@ -17,15 +17,15 @@ exec > $logfile 2>&1
 
 # Download assets
 mkdir /usr/local/.install
-curl -L -o /tmp/background.png https://github.com/xsrvx/Installapplications/raw/master/assets/Background.jpg
+curl -L -o /tmp/background.png https://raw.githubusercontent.com/xsrvx/Installapplications/master/assets/Background.png
 mv /tmp/background.png /usr/local/.install/
-curl -L -o /tmp/background.png https://github.com/xsrvx/Installapplications/raw/master/assets/iconoff.png
+curl -L -o /tmp/background.png https://raw.githubusercontent.com/xsrvx/Installapplications/master/assets/iconoff.png
 mv /tmp/iconoff.png /usr/local/.install/
-curl -L -o /tmp/background.png https://github.com/xsrvx/Installapplications/raw/master/assets/iconon.png
+curl -L -o /tmp/background.png https://raw.githubusercontent.com/xsrvx/Installapplications/master/assets/iconon.png
 mv /tmp/iconon.png /usr/local/.install/
-curl -L -o /tmp/background.png https://github.com/xsrvx/Installapplications/raw/master/assets/logo.no.mission.medium.png
+curl -L -o /tmp/background.png https://raw.githubusercontent.com/xsrvx/Installapplications/master/assets/logo.no.mission.medium.png
 mv /tmp/logo.no.mission.medium.png /usr/local/.install/
-curl -L -o /tmp/background.png https://github.com/xsrvx/Installapplications/raw/master/assets/shaded-district-logo.png
+curl -L -o /tmp/background.png https://raw.githubusercontent.com/xsrvx/Installapplications/master/assets/shaded-district-logo.png
 mv /tmp/shaded-district-logo.png /usr/local/.install/
 chmod -R 755 /usr/local/.install
 chown root:wheel -R /usr/local/.install
@@ -40,7 +40,7 @@ setupDone="/var/tmp/com.depnotify.provisioning.done"
 DNLog="/var/tmp/depnotify.log"
 
 # Remove previous DEPNotify command file if it exists
-if [[ -e /var/tmp/depnotify.log ]];
+if [[ -e /var/tmp/depnotify.log ]]; then
 	rm -rf $DNLog
 	# create new file
 	touch $DNLog
@@ -52,7 +52,7 @@ fi
 # Prepare DEPNotify
 echo "Command: Image: /usr/local/.install/shaded-district-logo.png" >> $DNLog
 echo "Command: Status: Preparing..." >> $DNLog
-echo "Command: Determinate: 7" >> $DNLog
+echo "Command: Determinate: 5" >> $DNLog
 echo "Command: MainTitle: Welcome to Flagler County Public Schools!" >> $DNLog
 
 # Run DEPNotify
@@ -151,7 +151,7 @@ defaults write /Library/Preferences/menu.nomad.login.ad.plist KeychainCreate -bo
 
 # -- write out settings for Securly -----------------------------
 # Detects all network hardware & creates services for all installed network hardware
-echo "Status: Enabling PAC for Securly..."
+echo "Status: Enabling PAC for Securly..." >> $DNLog
 autoProxyURL="https://useast-www.securly.com/smart.pac?fid=chandler.bing@flaglerschools.com"
   
 echo "Detecting network hardware..."
