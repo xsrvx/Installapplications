@@ -28,13 +28,13 @@
       "version": "1.2.0.1003"
     },
     {
-    "file": "/Library/installapplications/serviceacct.pkg",
-    "hash": "0f7d4a9c20a0e13eab7e7c98f4cdc6b7e725a83aaece95cdaee053d41e3ba925",
-    "name": "Service Account",
-    "packageid": "net.flaglercps.serviceacctpkg",
-    "type": "package",
-    "url": "https://raw.githubusercontent.com/xsrvx/Installapplications/master/server/setupassistant/serviceacct.pkg",
-    "version": "1.0"
+      "file": "/Library/installapplications/serviceacct.pkg",
+      "hash": "0f7d4a9c20a0e13eab7e7c98f4cdc6b7e725a83aaece95cdaee053d41e3ba925",
+      "name": "Service Account",
+      "packageid": "net.flaglercps.serviceacctpkg",
+      "type": "package",
+      "url": "https://raw.githubusercontent.com/xsrvx/Installapplications/master/server/setupassistant/serviceacct.pkg",
+      "version": "1.0"
     }
   ], 
   "userland": [
