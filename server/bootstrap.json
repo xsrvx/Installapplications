@@ -47,11 +47,11 @@
       "version": "1.3.1"
     }, 
     {
-      "file": "/Library/installapplications/postinstall.sh", 
-      "hash": "17b6ea76d7326e47b9b1fc00b6f4d5bf11450cf62b787db10fedc5ee8bce5404", 
+      "file": "/Library/installapplications/postinstall2.sh", 
+      "hash": "c5f2412035c66e87513cca381880a550f3649d194aafcbe78ade94f27bd4b94c", 
       "name": "Postinstall configuration", 
       "type": "rootscript", 
-      "url": "https://raw.githubusercontent.com/xsrvx/Installapplications/master/server/userland/postinstall.sh"
+      "url": "https://raw.githubusercontent.com/xsrvx/Installapplications/master/server/userland/postinstall2.sh"
     }
   ]
 }
