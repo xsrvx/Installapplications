@@ -12,8 +12,8 @@
 #
 
 # Redirect output to log
-logfile=/var/log/postinstall.log
-exec > $logfile 2>&1
+#logfile=/var/log/postinstall.log
+#exec > $logfile 2>&1
 
 # Securly PAC for students
 securlyPAC() {
