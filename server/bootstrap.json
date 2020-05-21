@@ -48,7 +48,7 @@
     },
     {
       "file": "/Library/installapplications/depnotify.sh",
-      "hash": "200fe2e451110e4ec872520acea722e9e4d7c3513727c2af112831ef2a2bf3b5",
+      "hash": "c61acd62e9a7ef89e4db37646ba089faf455c138ed859c7c14faf80969bb6edd",
       "name": "DEPNotify Config",
       "type": "rootscript",
       "url": "https://raw.githubusercontent.com/xsrvx/Installapplications/master/server/userland/depnotify.sh"
@@ -56,7 +56,7 @@
     {
       "donotwait": false,
       "file": "/Library/installapplications/postinstall2.sh", 
-      "hash": "42f673f0990984fc7a81805753224bc0d1adf760edf1bfbf1d4cdc082bd61810", 
+      "hash": "04edfde26e15f5b01cbb23d327c8a00f3efb86b14b437e00d67e09a11d8c298b", 
       "name": "Postinstall configuration", 
       "type": "rootscript", 
       "url": "https://raw.githubusercontent.com/xsrvx/Installapplications/master/server/userland/postinstall2.sh"
