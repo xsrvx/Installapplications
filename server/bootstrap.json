@@ -47,7 +47,6 @@
       "version": "1.3.1"
     },
     {
-      "donotwait": true,
       "file": "/Library/installapplications/depnotify.sh",
       "hash": "200fe2e451110e4ec872520acea722e9e4d7c3513727c2af112831ef2a2bf3b5",
       "name": "DEPNotify Config",
@@ -57,7 +56,7 @@
     {
       "donotwait": false,
       "file": "/Library/installapplications/postinstall2.sh", 
-      "hash": "2950fd955715e721597d9fff063340b9d2e956bf3753c830a45aef6840eedf14", 
+      "hash": "42f673f0990984fc7a81805753224bc0d1adf760edf1bfbf1d4cdc082bd61810", 
       "name": "Postinstall configuration", 
       "type": "rootscript", 
       "url": "https://raw.githubusercontent.com/xsrvx/Installapplications/master/server/userland/postinstall2.sh"
