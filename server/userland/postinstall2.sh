@@ -46,6 +46,9 @@ securlyPAC() {
 	Killall -HUP mDNSResponder
 }
 
+# Command file
+DNLog="/var/tmp/depnotify.log"
+
 # Download assets
 mkdir /usr/local/.install
 curl -L -o /tmp/background.jpg https://raw.githubusercontent.com/xsrvx/Installapplications/master/assets/Background.jpg
