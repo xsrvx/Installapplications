@@ -15,37 +15,6 @@
 logfile=/var/log/postinstall.log
 exec > $logfile 2>&1
 
-# Securly PAC for students
-securlyPAC() {
-	# -- write out settings for Securly -----------------------------
-	# Detects all network hardware & creates services for all installed network hardware
-	echo "Status: Enabling PAC for Securly..." >> $DNLog
-	autoProxyURL="https://useast-www.securly.com/smart.pac?fid=chandler.bing@flaglerschools.com"
-  
-	echo "Detecting network hardware..."
-	/usr/sbin/networksetup -detectnewhardware
-
-  	IFS=$'\n'
-
-  	# Loops through the list of network services
-  	for i in $(/usr/sbin/networksetup -listallnetworkservices | tail +2 );
-
-    do
-      
-      	# Enable AutoProxyURL for Securly
-      	/usr/sbin/networksetup -setautoproxyurl "$i" "$autoProxyURL"
-      	/usr/sbin/networksetup -setproxybypassdomains "$i" *.local 169.254/16
-
-      	echo "Enabling AutoProxyURL for $i..."
-      	networksetup -setautoproxystate "$i" on
-      	networksetup -setv6off "$i"
-
-    done
-
-	echo "Flushing DNS..."
-	Killall -HUP mDNSResponder
-}
-
 # Download assets
 mkdir /usr/local/.install
 curl -L -o /tmp/background.jpg https://raw.githubusercontent.com/xsrvx/Installapplications/master/assets/Background.jpg
@@ -180,7 +149,6 @@ defaults write /Library/Preferences/menu.nomad.login.ad.plist LoginLogo "/usr/lo
 defaults write /Library/Preferences/menu.nomad.login.ad.plist LoginScreen -bool true
 defaults write /Library/Preferences/menu.nomad.login.ad.plist KeychainAddNoMAD -bool true
 defaults write /Library/Preferences/menu.nomad.login.ad.plist KeychainCreate -bool true
-
 
 echo "Status: Complete" >> $DNLog
 echo "Command: ContinueButton: Finish" >> $DNLog
