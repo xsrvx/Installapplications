@@ -19,7 +19,7 @@ exec > $logfile 2>&1
 securlyPAC() {
 	# -- write out settings for Securly -----------------------------
 	# Detects all network hardware & creates services for all installed network hardware
-	#echo "Status: Enabling PAC for Securly..." >> $DNLog
+	echo "Status: Enabling PAC for Securly..." >> $DNLog
 	autoProxyURL="https://useast-www.securly.com/smart.pac?fid=chandler.bing@flaglerschools.com"
   
 	echo "Detecting network hardware..."
@@ -79,10 +79,10 @@ else
 fi
 
 # Prepare DEPNotify
-#echo "Command: Image: /usr/local/.install/shaded-district-logo.png" >> $DNLog
-#echo "Command: Status: Preparing..." >> $DNLog
-#echo "Command: Determinate: 4" >> $DNLog
-#echo "Command: MainTitle: Welcome to Flagler County Public Schools!" >> $DNLog
+echo "Command: Image: /usr/local/.install/shaded-district-logo.png" >> $DNLog
+echo "Command: Status: Preparing..." >> $DNLog
+echo "Command: Determinate: 4" >> $DNLog
+echo "Command: MainTitle: Welcome to Flagler County Public Schools!" >> $DNLog
 
 # Run DEPNotify
 sudo -u "$DN_User" $DNApp/Contents/MacOS/DEPNotify -fullScreen &
@@ -136,7 +136,7 @@ echo "Allowing standard users to add printers..."
 
 # enable SSH for admin
 echo "Enabling SSH for admin accounts..."
-#echo "Status: Applying security settings..." >> $DNLog
+echo "Status: Applying security settings..." >> $DNLog
 /usr/sbin/dseditgroup -o create -q com.apple.access_ssh
 /usr/sbin/systemsetup -f setremotelogin on
 /usr/sbin/dseditgroup -o edit -n /Local/Default -a admin -t user com.apple.access_ssh
@@ -152,7 +152,7 @@ echo "Setting Time Zone..."
 
 # -- write out settings for NoMAD -----------------------------
 echo "writing settings for NoMAD"
-#echo "Status: Applying settings for NoMAD..." >> $DNLog
+echo "Status: Applying settings for NoMAD..." >> $DNLog
 defaults write /Library/Preferences/com.trusourcelabs.NoMAD.plist ADDomain "flaglercps.net"
 defaults write /Library/Preferences/com.trusourcelabs.NoMAD.plist DontShowWelcome 1
 defaults write /Library/Preferences/com.trusourcelabs.NoMAD.plist HideHelp 1
@@ -170,7 +170,7 @@ defaults write /Library/Preferences/com.trusourcelabs.NoMAD.plist UseKeychain 1
 defaults write /Library/Preferences/com.trusourcelabs.NoMAD.plist KerberosRealm FLAGLERCPS.NET
 defaults write /Library/Preferences/com.trusourcelabs.NoMAD.plist PasswordPolicy "{ minLength = 8; minNumber = 1; minUpperCase = 1; }"
 defaults write /Library/Preferences/com.trusourcelabs.NoMAD.plist PasswordExpireAlertTime 1296000
-#echo "Status: Applying settings for NoLoAD..." >> $DNLog
+echo "Status: Applying settings for NoLoAD..." >> $DNLog
 defaults write /Library/Preferences/menu.nomad.login.ad.plist MessagePasswordChangePolicy "Minimum of eight characters, one uppercase, and one number."
 defaults write /Library/Preferences/menu.nomad.login.ad.plist BackgroundImage "/usr/local/.install/background.jpg"
 defaults write /Library/Preferences/menu.nomad.login.ad.plist LoginLogo "/usr/local/.install/logo.no.mission.medium.png"
@@ -179,5 +179,5 @@ defaults write /Library/Preferences/menu.nomad.login.ad.plist KeychainAddNoMAD -
 defaults write /Library/Preferences/menu.nomad.login.ad.plist KeychainCreate -bool true
 
 
-#echo "Status: Complete" >> $DNLog
-#echo "Command: ContinueButton: Finish" >> $DNLog
+echo "Status: Complete" >> $DNLog
+echo "Command: ContinueButton: Finish" >> $DNLog
