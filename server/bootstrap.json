@@ -48,7 +48,7 @@
     },
     {
       "file": "/Library/installapplications/depnotify.sh",
-      "hash": "d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed",
+      "hash": "200fe2e451110e4ec872520acea722e9e4d7c3513727c2af112831ef2a2bf3b5",
       "name": "DEPNotify Config",
       "type": "rootscript",
       "url": "https://raw.githubusercontent.com/xsrvx/Installapplications/master/server/userland/depnotify.sh"
