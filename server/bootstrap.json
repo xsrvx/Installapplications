@@ -48,11 +48,11 @@
     }, 
     {
       "donotwait": false,
-      "file": "/Library/installapplications/postinstall2.sh", 
-      "hash": "46a1f0209c51424a7bfec3a1295f25791ad10764112e0392663c193b5205998d", 
+      "file": "/Library/installapplications/postinstall.sh", 
+      "hash": "5d5bb1cc284c193bedd00b365b72df2feb80109b4e68aae5426bfa4b3af1602b", 
       "name": "Postinstall configuration", 
       "type": "rootscript", 
-      "url": "https://raw.githubusercontent.com/xsrvx/Installapplications/master/server/userland/postinstall2.sh"
+      "url": "https://raw.githubusercontent.com/xsrvx/Installapplications/master/server/userland/postinstall.sh"
     }
   ]
 }
