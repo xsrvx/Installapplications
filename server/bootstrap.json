@@ -47,7 +47,7 @@
       "version": "1.3.1"
     },
     {
-      "donotwait": true
+      "donotwait": true,
       "file": "/Library/installapplications/depnotify.sh",
       "hash": "200fe2e451110e4ec872520acea722e9e4d7c3513727c2af112831ef2a2bf3b5",
       "name": "DEPNotify Config",
