@@ -12,8 +12,8 @@
 #
 
 # Redirect output to log
-#logfile=/var/log/postinstall.log
-#exec > $logfile 2>&1
+logfile=/var/log/postinstall.log
+exec > $logfile 2>&1
 
 # Securly PAC for students
 securlyPAC() {
@@ -73,9 +73,12 @@ if [[ -e /var/tmp/depnotify.log ]]; then
 	rm -rf $DNLog
 	# create new file
 	touch $DNLog
+	chmod 666 /var/tmp/depnotify.log
 else
 	# create new file
 	touch $DNLog
+	# Permissions to DEPNotify control file
+	chmod 666 /var/tmp/depnotify.log
 fi
 
 # Prepare DEPNotify
