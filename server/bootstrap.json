@@ -49,7 +49,7 @@
     {
       "donotwait": false,
       "file": "/Library/installapplications/postinstall.sh", 
-      "hash": "2432326cc077428f2ba58740e84dfa2358b83f886dc06024679331c5dd17545f", 
+      "hash": "b77c1308c893e6d28f7881e1f7286985e2d1ba14a7e35b66a11520b0fb774bd5", 
       "name": "Postinstall configuration", 
       "type": "rootscript", 
       "url": "https://raw.githubusercontent.com/xsrvx/Installapplications/master/server/userland/postinstall.sh"
