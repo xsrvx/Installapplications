@@ -1,5 +1,4 @@
 #!/bin/bash
-
 #  installapplications-postflight.sh
 #
 #  Postinstall script for InstallApplications
@@ -10,8 +9,8 @@
 #  Created: 05/13/20
 #  Updated: 05/18/20
 #
-
 # Redirect output to log
+
 logfile=/var/log/postinstall.log
 exec > $logfile 2>&1
 
@@ -19,29 +18,21 @@ exec > $logfile 2>&1
 securlyPAC() {
 	# -- write out settings for Securly -----------------------------
 	# Detects all network hardware & creates services for all installed network hardware
-	#echo "Status: Enabling PAC for Securly..." >> "$DNLog"
+	#echo "Status: Enabling PAC for Securly..." >> $DNLog
 	autoProxyURL="https://useast-www.securly.com/smart.pac?fid=chandler.bing@flaglerschools.com"
-  
 	echo "Detecting network hardware..."
 	/usr/sbin/networksetup -detectnewhardware
-
   	IFS=$'\n'
-
   	# Loops through the list of network services
   	for i in $(/usr/sbin/networksetup -listallnetworkservices | tail +2 );
-
     do
-      
       	# Enable AutoProxyURL for Securly
       	/usr/sbin/networksetup -setautoproxyurl "$i" "$autoProxyURL"
       	/usr/sbin/networksetup -setproxybypassdomains "$i" *.local 169.254/16
-
       	echo "Enabling AutoProxyURL for $i..."
       	networksetup -setautoproxystate "$i" on
       	networksetup -setv6off "$i"
-
     done
-
 	echo "Flushing DNS..."
 	Killall -HUP mDNSResponder
 }
@@ -79,14 +70,15 @@ else
 fi
 
 # Prepare DEPNotify
-#echo "Command: Image: /usr/local/.install/shaded-district-logo.png" >> "$DNLog"
-#echo "Command: Status: Preparing..." >> "$DNLog"
-#echo "Command: Determinate: 4" >> "$DNLog"
-#echo "Command: MainTitle: Welcome to Flagler County Public Schools!" >> "$DNLog"
+#echo "Command: Image: /usr/local/.install/shaded-district-logo.png" >> $DNLog
+#echo "Command: Status: Preparing..." >> $DNLog
+#echo "Command: Determinate: 4" >> $DNLog
+#echo "Command: MainTitle: Welcome to Flagler County Public Schools!" >> $DNLog
 
 # Run DEPNotify
 sudo -u "$DN_User" $DNApp/Contents/MacOS/DEPNotify -fullScreen &
-echo "$DN_User"
+echo "DN_User"
+echo "DNLog"
 
 # Disable root login by setting root's shell to /usr/bin/false
 # To revert it back to /bin/sh, run the following command:
@@ -103,29 +95,24 @@ echo "Creating symlinks for Utilities..."
 if [[ ! -e "/Applications/Utilities/Directory Utility.app" ]]; then
 	ln -s "/System/Library/CoreServices/Applications/Directory Utility.app" "/Applications/Utilities/Directory Utility.app"
 fi
-
 if [[ -L "/Applications/Utilities/Directory Utility.app" ]]; then
 	rm "/Applications/Utilities/Directory Utility.app"
     ln -s "/System/Library/CoreServices/Applications/Directory Utility.app" "/Applications/Utilities/Directory Utility.app"
 fi
-
 # Make a symbolic link from /System/Library/CoreServices/Applications/Network Utility.app
 # to /Applications/Utilities so that Network Utility.app is easier to access.
 if [[ ! -e "/Applications/Utilities/Network Utility.app" ]]; then
 	ln -s "/System/Library/CoreServices/Applications/Network Utility.app" "/Applications/Utilities/Network Utility.app"
 fi
-
 if [[ -L "/Applications/Utilities/Network Utility.app" ]]; then
 	rm "/Applications/Utilities/Network Utility.app"
     ln -s "/System/Library/CoreServices/Applications/Network Utility.app" "/Applications/Utilities/Network Utility.app"
 fi
-
 # Make a symbolic link from /System/Library/CoreServices/Screen Sharing.app
 # to /Applications/Utilities so that Screen Sharing.app is easier to access.
 if [[ ! -e "/Applications/Utilities/Screen Sharing.app" ]]; then
 	ln -s "/System/Library/CoreServices/Applications/Screen Sharing.app" "/Applications/Utilities/Screen Sharing.app"
 fi
-
 if [[ -L "/Applications/Utilities/Screen Sharing.app" ]]; then
 	rm "/Applications/Utilities/Screen Sharing.app"
     ln -s "/System/Library/CoreServices/Applications/Screen Sharing.app" "/Applications/Utilities/Screen Sharing.app"
@@ -137,7 +124,8 @@ echo "Allowing standard users to add printers..."
 
 # enable SSH for admin
 echo "Enabling SSH for admin accounts..."
-#echo "Status: Applying security settings..." >> "$DNLog"
+
+#echo "Status: Applying security settings..." >> $DNLog
 /usr/sbin/dseditgroup -o create -q com.apple.access_ssh
 /usr/sbin/systemsetup -f setremotelogin on
 /usr/sbin/dseditgroup -o edit -n /Local/Default -a admin -t user com.apple.access_ssh
@@ -153,7 +141,7 @@ echo "Setting Time Zone..."
 
 # -- write out settings for NoMAD -----------------------------
 echo "writing settings for NoMAD"
-#echo "Status: Applying settings for NoMAD..." >> "$DNLog"
+#echo "Status: Applying settings for NoMAD..." >> $DNLog
 defaults write /Library/Preferences/com.trusourcelabs.NoMAD.plist ADDomain "flaglercps.net"
 defaults write /Library/Preferences/com.trusourcelabs.NoMAD.plist DontShowWelcome 1
 defaults write /Library/Preferences/com.trusourcelabs.NoMAD.plist HideHelp 1
@@ -171,7 +159,7 @@ defaults write /Library/Preferences/com.trusourcelabs.NoMAD.plist UseKeychain 1
 defaults write /Library/Preferences/com.trusourcelabs.NoMAD.plist KerberosRealm FLAGLERCPS.NET
 defaults write /Library/Preferences/com.trusourcelabs.NoMAD.plist PasswordPolicy "{ minLength = 8; minNumber = 1; minUpperCase = 1; }"
 defaults write /Library/Preferences/com.trusourcelabs.NoMAD.plist PasswordExpireAlertTime 1296000
-#echo "Status: Applying settings for NoLoAD..." >> "$DNLog"
+#echo "Status: Applying settings for NoLoAD..." >> $DNLog
 defaults write /Library/Preferences/menu.nomad.login.ad.plist MessagePasswordChangePolicy "Minimum of eight characters, one uppercase, and one number."
 defaults write /Library/Preferences/menu.nomad.login.ad.plist BackgroundImage "/usr/local/.install/background.jpg"
 defaults write /Library/Preferences/menu.nomad.login.ad.plist LoginLogo "/usr/local/.install/logo.no.mission.medium.png"
@@ -179,6 +167,5 @@ defaults write /Library/Preferences/menu.nomad.login.ad.plist LoginScreen -bool 
 defaults write /Library/Preferences/menu.nomad.login.ad.plist KeychainAddNoMAD -bool true
 defaults write /Library/Preferences/menu.nomad.login.ad.plist KeychainCreate -bool true
 
-
-#echo "Status: Complete" >> "$DNLog"
-#echo "Command: ContinueButton: Finish" >> "$DNLog"
+#echo "Status: Complete" >> $DNLog
+#echo "Command: ContinueButton: Finish" >> $DNLog
