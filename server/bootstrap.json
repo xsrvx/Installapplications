@@ -54,7 +54,7 @@
       "url": "https://raw.githubusercontent.com/xsrvx/Installapplications/master/server/userland/depnotify.sh"
     },
     {
-      "donotwait": true,
+      "donotwait": false,
       "file": "/Library/installapplications/postinstall2.sh", 
       "hash": "90757b750ffb20bbc34ceceff1f6af45e4f6fa52158b6ad92363adbc238bf8e7", 
       "name": "Postinstall configuration", 
