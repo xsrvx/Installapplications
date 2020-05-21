@@ -60,14 +60,14 @@ DN_User=$(stat -f %Su "/dev/console")
 DNLog="/var/tmp/depnotify.log"
 
 # Remove previous DEPNotify command file if it exists
-if [[ -e /var/tmp/depnotify.log ]]; then
-	rm -rf $DNLog
-	# create new file
-	touch $DNLog
-else
-	# create new file
-	touch $DNLog
-fi
+#if [[ -e /var/tmp/depnotify.log ]]; then
+#	rm -rf $DNLog
+#	# create new file
+#	touch $DNLog
+#else
+#	# create new file
+#	touch $DNLog
+#fi
 
 # Prepare DEPNotify
 #echo "Command: Image: /usr/local/.install/shaded-district-logo.png" >> $DNLog
