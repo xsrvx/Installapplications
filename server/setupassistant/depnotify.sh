@@ -25,7 +25,7 @@ else
 fi
 
 # Prepare DEPNotify
-echo "Command: Image: /usr/local/.install/shaded-district-logo.png" >> $DNLog
+#echo "Command: Image: /usr/local/.install/shaded-district-logo.png" >> $DNLog
 echo "Command: Status: Preparing..." >> $DNLog
 echo "Command: Determinate: 4" >> $DNLog
 echo "Command: MainTitle: Welcome to Flagler County Public Schools!" >> $DNLog
