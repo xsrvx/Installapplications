@@ -69,7 +69,7 @@ chmod -R 755 /usr/local/.install
 chown -R root:wheel /usr/local/.install
 
 # Run DEPNotify
-$DNApp/Contents/MacOS/DEPNotify -fullScreen
+$DNApp/Contents/MacOS/DEPNotify -fullScreen &
 
 # Disable root login by setting root's shell to /usr/bin/false
 # To revert it back to /bin/sh, run the following command:
