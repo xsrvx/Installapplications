@@ -29,7 +29,7 @@
     },
     {
       "file": "/Library/installapplications/depnotify.sh",
-      "hash": "",
+      "hash": "562124cdc5660a7921682001e2bf67fde01ee2be35789427fe24be09d1a506d5",
       "name": "DEPNotify Config",
       "type": "rootscript",
       "url": "https://raw.githubusercontent.com/xsrvx/Installapplications/master/server/setupassistant/depnotify.sh"
@@ -38,7 +38,7 @@
   "userland": [
     {
       "file": "/Library/installapplications/postinstall.sh",
-      "hash": "",
+      "hash": "9a6f7e7cca5c5a0c126df4cd1c5ec21eb51111f8fe513b96c5e48db27d4ad8dd",
       "name": "Postinstall configuration",
       "type": "rootscript",
       "url": "https://raw.githubusercontent.com/xsrvx/Installapplications/master/server/userland/postinstall.sh"
