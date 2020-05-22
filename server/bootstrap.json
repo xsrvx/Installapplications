@@ -37,10 +37,10 @@
   ], 
   "userland": [
     {
-      "file": "/Library/installapplications/depnotify_user_launcher.py",
+      "file": "/Library/installapplications/userscripts/depnotify_user_launcher.py",
       "hash": "76536e4e74e9831cc266c6dc85fef39302fa0b06a2ee92fe80dfedcd18bdd723",
       "name": "Launch DEPNotify",
-      "type": "rootscript",
+      "type": "userscript",
       "url": "https://raw.githubusercontent.com/xsrvx/Installapplications/master/server/userland/depnotify_user_launcher.py"
     },
     {
