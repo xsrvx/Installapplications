@@ -29,7 +29,7 @@
     },
     {
       "file": "/Library/installapplications/depnotify_customization.py",
-      "hash": "d4891b875cd512aa04407e21a9a2e595a4595491889807ea861a0ccddad71b58",
+      "hash": "4101a72be9f71487623788a65dbecbbd22a76cc5dfaf250e61ea592fa04c8f7b",
       "name": "DEPNotify Config",
       "type": "rootscript",
       "url": "https://raw.githubusercontent.com/xsrvx/Installapplications/master/server/setupassistant/depnotify_customization.py"
