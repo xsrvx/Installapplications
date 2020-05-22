@@ -48,10 +48,6 @@ securlyPAC() {
 
 # Command file
 DNLog="/var/tmp/depnotify.log"
-# DEPNotify location
-DNApp="/Applications/Utilities/DEPNotify.app"
-# Get the logged in user (should be admin)
-DN_User=$(stat -f %Su "/dev/console")
 
 # Download assets
 mkdir /usr/local/.install
@@ -67,9 +63,6 @@ curl -L -o /tmp/shaded-district-logo.png https://raw.githubusercontent.com/xsrvx
 mv /tmp/shaded-district-logo.png /usr/local/.install/
 chmod -R 755 /usr/local/.install
 chown -R root:wheel /usr/local/.install
-
-# Run DEPNotify
-$DNApp/Contents/MacOS/DEPNotify -fullScreen &
 
 # Disable root login by setting root's shell to /usr/bin/false
 # To revert it back to /bin/sh, run the following command:
