@@ -38,14 +38,14 @@
   "userland": [
     {
       "file": "/Library/installapplications/depnotify_user_launcher.py",
-      "hash": "",
+      "hash": "68cbfceffaa5c0bc713b75aa0bddd9e7b58190af1ada9610befd36f6773d30c9",
       "name": "Launch DEPNotify",
       "type": "rootscript",
       "url": "https://raw.githubusercontent.com/xsrvx/Installapplications/master/server/userland/depnotify_user_launcher.py"
     },
     {
       "file": "/Library/installapplications/postinstall.sh",
-      "hash": "",
+      "hash": "21e535ea8641485baa4cd99bf8722f2046bfa5d69f491b3d6dd821290c481357",
       "name": "Postinstall configuration",
       "type": "rootscript",
       "url": "https://raw.githubusercontent.com/xsrvx/Installapplications/master/server/userland/postinstall.sh"
