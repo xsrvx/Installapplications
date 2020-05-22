@@ -23,22 +23,29 @@
       "hash": "4b32f95c141652a7a2d2f9b321c62499d5ba092ec6d37d590203f526c8e6585a", 
       "name": "NoMAD", 
       "packageid": "com.trusourcelabs.NoMAD", 
-      "type": "package", 
+      "type": "package",
       "url": "https://raw.githubusercontent.com/xsrvx/Installapplications/master/server/setupassistant/NoMAD.pkg", 
       "version": "1.2.0.1003"
     },
     {
-      "file": "/Library/installapplications/depnotify_customization.py",
-      "hash": "4101a72be9f71487623788a65dbecbbd22a76cc5dfaf250e61ea592fa04c8f7b",
+      "file": "/Library/installapplications/depnotify.sh",
+      "hash": "",
       "name": "DEPNotify Config",
       "type": "rootscript",
-      "url": "https://raw.githubusercontent.com/xsrvx/Installapplications/master/server/setupassistant/depnotify_customization.py"
+      "url": "https://raw.githubusercontent.com/xsrvx/Installapplications/master/server/setupassistant/depnotify.sh"
     }
   ], 
   "userland": [
     {
+      "file": "/Library/installapplications/depnotify_user_launcher.py",
+      "hash": "",
+      "name": "Launch DEPNotify",
+      "type": "rootscript",
+      "url": "https://raw.githubusercontent.com/xsrvx/Installapplications/master/server/userland/depnotify_user_launcher.py"
+    },
+    {
       "file": "/Library/installapplications/postinstall.sh",
-      "hash": "3497a342f4a4e6164efb999d0f49aba44c8049cae9e529d3e156f5630c445d29",
+      "hash": "",
       "name": "Postinstall configuration",
       "type": "rootscript",
       "url": "https://raw.githubusercontent.com/xsrvx/Installapplications/master/server/userland/postinstall.sh"
