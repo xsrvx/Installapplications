@@ -11,7 +11,7 @@
   "setupassistant": [
     {
       "file": "/Library/installapplications/assets.sh",
-      "hash": "f4cb6b8e49cf92080f1f1ece314e522c53c84b0974a367978bceae08ffc8bf7d",
+      "hash": "cbaba481976ff0ca58539bbf741714284d69f8fd1de8899418777b13030d1061",
       "name": "Download assets",
       "type": "rootscript",
       "url": "https://raw.githubusercontent.com/xsrvx/Installapplications/master/server/setupassistant/assets.sh"
