@@ -40,7 +40,7 @@ def main():
             pass
         # pylint: enable=bare-except
     deplog("Command: WindowTitle: Welcome to Flagler County Public Schools!")
-    deplog("Command: Image: {}".format(icns_path))
+    deplog("Command: Image: /usr/local/.install/shaded-district-logo.png")
     deplog("Status: Configuring Machine...")
 
     time.sleep(2)
