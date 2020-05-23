@@ -10,15 +10,6 @@
   ], 
   "setupassistant": [
     {
-      "file": "/Library/installapplications/Assets.pkg",
-      "hash": "4a72a2edc5a35b420db71ffad17050e86b679a769860c719e58d078c54b7efe0",
-      "name": "FCPS Payload",
-      "packageid": "net.flaglercps.assets",
-      "type": "package",
-      "url": "https://raw.githubusercontent.com/xsrvx/Installapplications/master/server/setupassistant/Assets.pkg",
-      "version": "1.0"
-    },
-    {
       "file": "/Library/installapplications/NoMAD-Login-AD.pkg", 
       "hash": "3f53c87b8b218d019d533c4469cf11753ed3a977d444b204e74925b76e3af9a6", 
       "name": "NoMAD Login AD", 
@@ -26,7 +17,30 @@
       "type": "package", 
       "url": "https://raw.githubusercontent.com/xsrvx/Installapplications/master/server/setupassistant/NoMAD-Login-AD.pkg", 
       "version": "1.3.1"
-    }, 
+    },
+    {
+      "file": "/Library/installapplications/noload_customization.py",
+      "hash": "471b24906b59bced46c921672e340c7948003b899aa73b179a5e6c05efe978ca",
+      "name": "NoLoAD Config",
+      "type": "rootscript",
+      "url": "https://raw.githubusercontent.com/xsrvx/Installapplications/master/server/setupassistant/noload_customization.py"
+    },
+    {
+      "file": "/Library/installapplications/mech.sh",
+      "hash": "881a151c51529a7865d4b2f35ef7ef94feff9ca81e909a1a0f89e67a468e856d",
+      "name": "Mech change",
+      "type": "rootscript",
+      "url": "https://raw.githubusercontent.com/xsrvx/Installapplications/master/server/setupassistant/mech.sh"
+    },
+    {
+      "file": "/Library/installapplications/Assets.pkg",
+      "hash": "0f48bade7aba9cf67a2b3fd27aa4e91daad7a66f331342379dfe6e8ce5993ec2",
+      "name": "FCPS Payload",
+      "packageid": "net.flaglercps.assets",
+      "type": "package",
+      "url": "https://raw.githubusercontent.com/xsrvx/Installapplications/master/server/setupassistant/Assets.pkg",
+      "version": "1.0"
+    },
     {
       "file": "/Library/installapplications/NoMAD.pkg", 
       "hash": "4b32f95c141652a7a2d2f9b321c62499d5ba092ec6d37d590203f526c8e6585a", 
@@ -35,13 +49,6 @@
       "type": "package",
       "url": "https://raw.githubusercontent.com/xsrvx/Installapplications/master/server/setupassistant/NoMAD.pkg", 
       "version": "1.2.0.1003"
-    },
-    {
-      "file": "/Library/installapplications/noload_customization.py",
-      "hash": "471b24906b59bced46c921672e340c7948003b899aa73b179a5e6c05efe978ca",
-      "name": "NoLoAD Config",
-      "type": "rootscript",
-      "url": "https://raw.githubusercontent.com/xsrvx/Installapplications/master/server/setupassistant/noload_customization.py"
     }
   ], 
   "userland": [
