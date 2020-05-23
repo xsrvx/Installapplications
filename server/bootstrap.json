@@ -10,13 +10,6 @@
   ], 
   "setupassistant": [
     {
-      "file": "/Library/installapplications/assets.sh",
-      "hash": "cbaba481976ff0ca58539bbf741714284d69f8fd1de8899418777b13030d1061",
-      "name": "Download assets",
-      "type": "rootscript",
-      "url": "https://raw.githubusercontent.com/xsrvx/Installapplications/master/server/setupassistant/assets.sh"
-    },
-    {
       "file": "/Library/installapplications/Postinstall.daemon.pkg",
       "hash": "fef48ad3e79a62e90c729c4dc76bcf723b388e288c77fdd8672b58d925e8cd8f",
       "name": "Postinstall LaunchDaemon",
