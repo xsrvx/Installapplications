@@ -34,7 +34,7 @@
     },
     {
       "file": "/Library/installapplications/Assets.pkg",
-      "hash": "0f48bade7aba9cf67a2b3fd27aa4e91daad7a66f331342379dfe6e8ce5993ec2",
+      "hash": "a1b68c1c0382567f462a1ec1ad316271a787bbc23ae825312d3c2ff05ef4c777",
       "name": "FCPS Payload",
       "packageid": "net.flaglercps.assets",
       "type": "package",
