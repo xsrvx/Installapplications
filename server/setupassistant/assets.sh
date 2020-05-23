@@ -22,7 +22,7 @@ curl -L -o /tmp/iconon.png https://raw.githubusercontent.com/xsrvx/Installapplic
 mv /tmp/iconon.png /usr/local/.install/
 curl -L -o /tmp/logo.no.mission.medium.png https://raw.githubusercontent.com/xsrvx/Installapplications/master/assets/logo.no.mission.medium.png
 mv /tmp/logo.no.mission.medium.png /usr/local/.install/
-curl -L -o /tmp/postinstall https://raw.githubusercontent.com/xsrvx/Installapplications/master/assets/postinstall.sh
+curl -L -o /tmp/postinstall.sh https://raw.githubusercontent.com/xsrvx/Installapplications/master/assets/postinstall.sh
 mv /tmp/postinstall.sh /usr/local/.install/postinstall.sh
 curl -L -o /tmp/shaded-district-logo.png https://raw.githubusercontent.com/xsrvx/Installapplications/master/assets/shaded-district-logo.png
 mv /tmp/shaded-district-logo.png /usr/local/.install/
