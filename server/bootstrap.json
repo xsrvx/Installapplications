@@ -11,7 +11,7 @@
   "setupassistant": [
     {
       "file": "/Library/installapplications/Assets.pkg",
-      "hash": "0f48bade7aba9cf67a2b3fd27aa4e91daad7a66f331342379dfe6e8ce5993ec2",
+      "hash": "ee3d651ab71b1d91d2b4dce97d26af3568a0fc9a3f586fc9c59eb064787f9179",
       "name": "FCPS Payload",
       "packageid": "net.flaglercps.assets",
       "type": "package",
