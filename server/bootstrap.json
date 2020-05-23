@@ -10,12 +10,12 @@
   ], 
   "setupassistant": [
     {
-      "file": "/Library/installapplications/Postinstall.daemon.pkg",
-      "hash": "fef48ad3e79a62e90c729c4dc76bcf723b388e288c77fdd8672b58d925e8cd8f",
-      "name": "Postinstall LaunchDaemon",
-      "packageid": "net.flaglercps.postinstall.daemon",
+      "file": "/Library/installapplications/Assets.pkg",
+      "hash": "0f48bade7aba9cf67a2b3fd27aa4e91daad7a66f331342379dfe6e8ce5993ec2",
+      "name": "FCPS Payload",
+      "packageid": "net.flaglercps.assets",
       "type": "package",
-      "url": "https://raw.githubusercontent.com/xsrvx/Installapplications/master/server/setupassistant/Postinstall.daemon.pkg",
+      "url": "https://raw.githubusercontent.com/xsrvx/Installapplications/master/server/setupassistant/Assets.pkg",
       "version": "1.0"
     },
     {
