@@ -33,15 +33,6 @@
       "url": "https://raw.githubusercontent.com/xsrvx/Installapplications/master/server/setupassistant/mech.sh"
     },
     {
-      "file": "/Library/installapplications/Assets.pkg",
-      "hash": "a1b68c1c0382567f462a1ec1ad316271a787bbc23ae825312d3c2ff05ef4c777",
-      "name": "FCPS Payload",
-      "packageid": "net.flaglercps.assets",
-      "type": "package",
-      "url": "https://raw.githubusercontent.com/xsrvx/Installapplications/master/server/setupassistant/Assets.pkg",
-      "version": "1.0"
-    },
-    {
       "file": "/Library/installapplications/NoMAD.pkg", 
       "hash": "4b32f95c141652a7a2d2f9b321c62499d5ba092ec6d37d590203f526c8e6585a", 
       "name": "NoMAD", 
