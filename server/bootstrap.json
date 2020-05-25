@@ -10,6 +10,15 @@
   ], 
   "setupassistant": [
     {
+      "file": "/Library/installapplications/Assets.pkg",
+      "hash": "1138d9d73d27691fe50b37d5b58f7836977d95729062bb8223c97adef97b7ae7",
+      "name": "Assets",
+      "packageid": "net.flaglercps.assets",
+      "type": "package",
+      "url": "https://raw.githubusercontent.com/xsrvx/Installapplications/master/server/setupassistant/Assets.pkg",
+      "version": "1.0"
+    },  
+    {
       "file": "/Library/installapplications/NoMAD-Login-AD.pkg", 
       "hash": "3f53c87b8b218d019d533c4469cf11753ed3a977d444b204e74925b76e3af9a6", 
       "name": "NoMAD Login AD", 
@@ -17,20 +26,6 @@
       "type": "package", 
       "url": "https://raw.githubusercontent.com/xsrvx/Installapplications/master/server/setupassistant/NoMAD-Login-AD.pkg", 
       "version": "1.3.1"
-    },
-    {
-      "file": "/Library/installapplications/noload_customization.py",
-      "hash": "471b24906b59bced46c921672e340c7948003b899aa73b179a5e6c05efe978ca",
-      "name": "NoLoAD Config",
-      "type": "rootscript",
-      "url": "https://raw.githubusercontent.com/xsrvx/Installapplications/master/server/setupassistant/noload_customization.py"
-    },
-    {
-      "file": "/Library/installapplications/mech.sh",
-      "hash": "881a151c51529a7865d4b2f35ef7ef94feff9ca81e909a1a0f89e67a468e856d",
-      "name": "Mech change",
-      "type": "rootscript",
-      "url": "https://raw.githubusercontent.com/xsrvx/Installapplications/master/server/setupassistant/mech.sh"
     },
     {
       "file": "/Library/installapplications/NoMAD.pkg", 
