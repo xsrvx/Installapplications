@@ -20,9 +20,9 @@
     },  
     {
       "file": "/Library/installapplications/NoMAD-Login-AD.pkg", 
-      "hash": "645a216739e6286c9dbfd1cf18443105490b14d9637ad614afdef0372ae73031", 
+      "hash": "d50976f202caf022abb0c3ef2303713a35fa998a74625e163deb9ed4afabaa98", 
       "name": "NoMAD Login AD", 
-      "packageid": "menu.nomad.login.ad", 
+      "packageid": "net.flaglercps.nomad-login-ad", 
       "type": "package", 
       "url": "https://raw.githubusercontent.com/xsrvx/Installapplications/master/server/setupassistant/NoMAD-Login-AD.pkg", 
       "version": "1.3.1"
