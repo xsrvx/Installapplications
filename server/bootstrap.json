@@ -11,7 +11,7 @@
   "setupassistant": [
     {
       "file": "/Library/installapplications/Assets.pkg",
-      "hash": "c1f2fdb77e7f7b40f4ad092af7b1bbe715b2e6d51fce02f6e4a5c37f8b51d2fb",
+      "hash": "a92e0c7fd97f45059156125400bdddc3c18e2016e025f34448ed86385d31e7e4",
       "name": "Assets",
       "packageid": "net.flaglercps.assets",
       "type": "package",
